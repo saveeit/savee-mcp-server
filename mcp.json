@@ -1,0 +1,8 @@
+{
+	"mcpServers": {
+		"savee": {
+			"type": "streamableHttp",
+			"url": "https://mcp.savee.com/mcp"
+		}
+	}
+}

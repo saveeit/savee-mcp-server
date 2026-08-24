@@ -1,0 +1,36 @@
+---
+description: Use the Savee MCP tools when the task involves design inspiration, visual references, moodboards, or the user's own saved work.
+alwaysApply: false
+---
+
+# Savee
+
+Savee is a curated visual-inspiration platform. The Savee MCP server exposes the
+user's own saves and boards, plus Savee's public library. All tools are
+read-only.
+
+## When to reach for it
+
+- The user asks about what they've been saving, their boards, or their feed —
+  use `list_saves`, `list_boards`, `list_board_saves`, `list_feed`.
+- The user wants references or a visual direction for something they haven't
+  saved yet — use `search` against the public library. Don't assume the answer
+  is in their own collection.
+- The user asks about a board's direction, themes, or "the vibe" of a set of
+  work — list it first, then look at it.
+
+## Looking vs. listing
+
+The list and search tools return metadata only: title, source URL, dimensions,
+dominant colors. That is enough to spot themes by color or to hand back source
+links, and not enough to answer anything about composition, layout, type, or
+texture.
+
+When the question is about what something *looks like*, call `view_saves` with
+the `id` values from a previous result. Ask for the few saves that actually
+matter, not a whole page — each one is an image in context.
+
+## Handing back results
+
+Always include the original source URL when citing a save. That's what the user
+needs in order to go look at the real thing, and it credits the original work.

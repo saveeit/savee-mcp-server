@@ -1,0 +1,21 @@
+{
+	"name": "savee",
+	"displayName": "Savee",
+	"version": "1.0.0",
+	"description": "Read your Savee saves, boards and home feed, and search its library of curated design inspiration.",
+	"author": {
+		"name": "Savee",
+		"email": "hey@savee.com"
+	},
+	"license": "MIT",
+	"keywords": [
+		"cursor",
+		"plugin",
+		"savee",
+		"design",
+		"inspiration",
+		"moodboard",
+		"ui",
+		"mcp"
+	]
+}
