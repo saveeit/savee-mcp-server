@@ -1,0 +1,10 @@
+{
+  "name": "savee",
+  "version": "1.0.0",
+  "description": "Read your Savee saves, boards and home feed, and search its public library of curated design inspiration. Read-only hosted MCP.",
+  "mcpServers": {
+    "savee": {
+      "httpUrl": "https://mcp.savee.com/mcp"
+    }
+  }
+}
