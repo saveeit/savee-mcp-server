@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "savee": {
+      "type": "http",
+      "url": "https://mcp.savee.com/mcp",
+      "note": "Official Savee hosted MCP server. Uses OAuth — on first connection the agent is prompted to authorize via browser; no API key to paste. Seven read-only tools: get_current_user, list_saves, list_feed, list_boards, list_board_saves, search, view_saves."
+    }
+  }
+}
