@@ -66,13 +66,14 @@ which takes effect immediately.
 
 ## Tools
 
-All seven tools are read-only and annotated `readOnlyHint`. No write tools
+All eight tools are read-only and annotated `readOnlyHint`. No write tools
 exist, so nothing here can save, edit, move, or delete anything in your account.
 
 | Tool | What it does |
 | --- | --- |
 | `get_current_user` | The signed-in Savee profile |
 | `list_saves` | Your own saves, newest first |
+| `get_save` | One specific save, from a savee.com link or its id |
 | `list_feed` | Your home feed |
 | `list_boards` | The boards you own or belong to |
 | `list_board_saves` | The saves on one board |
@@ -83,6 +84,11 @@ Every save comes back with its source URL, dimensions, and dominant colors, so
 an assistant can reason about what's in a collection rather than just list
 links. `view_saves` goes further and returns the images themselves, for
 questions about composition, layout, type, or how a set of images sit together.
+
+`get_save` is the one to use when you have a particular save in mind rather than
+a theme. Paste a link — `https://savee.com/i/997d6DW/` — and the assistant
+resolves it directly instead of searching for it. It also takes the bare short
+id (`997d6DW`), and it reaches your own saves plus any public save on Savee.
 
 Full reference: [docs.savee.com/mcp](https://docs.savee.com/mcp).
 
