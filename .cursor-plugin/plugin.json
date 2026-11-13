@@ -1,8 +1,8 @@
 {
 	"name": "savee",
 	"displayName": "Savee",
-	"version": "1.0.0",
-	"description": "Read your Savee saves, boards and home feed, and search its library of curated design inspiration.",
+	"version": "1.2.0",
+	"description": "Read your Savee saves, boards, feed and comments, search its library of curated design inspiration, and, with your permission, build boards and reply to comments.",
 	"author": {
 		"name": "Savee",
 		"email": "hey@savee.com"

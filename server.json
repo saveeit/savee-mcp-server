@@ -2,8 +2,8 @@
 	"$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
 	"name": "com.savee/savee",
 	"title": "Savee",
-	"description": "Read your Savee saves, boards and home feed, and search its public library. Read-only.",
-	"version": "1.0.1",
+	"description": "Read your Savee saves, boards, feed and comments, search its public library, collect what you find into boards, and reply to comments. Cannot delete anything.",
+	"version": "1.3.0",
 	"websiteUrl": "https://savee.com",
 	"repository": {
 		"url": "https://github.com/saveeit/savee-mcp-server",

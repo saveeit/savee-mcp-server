@@ -66,23 +66,47 @@ which takes effect immediately.
 
 ## Tools
 
-All seven tools are read-only and annotated `readOnlyHint`. No write tools
-exist, so nothing here can save, edit, move, or delete anything in your account.
+Nine read tools, always available:
 
 | Tool | What it does |
 | --- | --- |
 | `get_current_user` | The signed-in Savee profile |
 | `list_saves` | Your own saves, newest first |
+| `get_save` | One specific save, from a savee.com link or its id |
 | `list_feed` | Your home feed |
 | `list_boards` | The boards you own or belong to |
 | `list_board_saves` | The saves on one board |
 | `search` | Savee's public library — everything on the platform, not just your saves |
 | `view_saves` | The actual images for specific saves, so the assistant can see them |
+| `list_comments` | The comment threads on one save, with replies |
+
+Five more appear only if you grant write access on the consent screen. Each is
+gated by its own scope, and a connection without that scope never sees the tool:
+
+| Tool | Scope | What it does |
+| --- | --- | --- |
+| `create_board` | `boards:write` | Makes a new board (private by default), or a sub board |
+| `update_board` | `boards:write` | Renames a board, or changes its description or privacy |
+| `save_items` | `saves:write` | Saves items into your account, optionally onto a board |
+| `remove_save_from_board` | `boards:write` | Takes one save off a board, leaving it in your account |
+| `add_comment` | `comments:write` | Posts a comment, or a reply, on a save as you |
+
+Nothing here deletes a save, a board, or a comment, or uploads new images.
 
 Every save comes back with its source URL, dimensions, and dominant colors, so
 an assistant can reason about what's in a collection rather than just list
 links. `view_saves` goes further and returns the images themselves, for
 questions about composition, layout, type, or how a set of images sit together.
+
+`list_comments` reads the conversation under a save, including comments private
+to your team. `add_comment` joins it as you: a comment is public unless it's
+marked team-only, everyone who saved the image is notified, and replies take the
+visibility of their thread. Assistants are told to post only what you ask for.
+
+`get_save` is the one to use when you have a particular save in mind rather than
+a theme. Paste a link — `https://savee.com/i/997d6DW/` — and the assistant
+resolves it directly instead of searching for it. It also takes the bare short
+id (`997d6DW`), and it reaches your own saves plus any public save on Savee.
 
 Full reference: [docs.savee.com/mcp](https://docs.savee.com/mcp).
 
@@ -90,8 +114,9 @@ Full reference: [docs.savee.com/mcp](https://docs.savee.com/mcp).
 
 Private saves and private boards are included — the connector sees what you see
 when signed in. The Savee setting *"Hide private board saves from profile feed"*
-applies here too. Scopes are granted individually on the consent screen, and a
-tool whose scope you declined returns an error rather than data.
+applies here too. Scopes are granted individually on the consent screen. Write
+scopes are never granted unless the client asks for them, and they're marked
+separately so read and write are easy to tell apart.
 
 ## Requirements
 
