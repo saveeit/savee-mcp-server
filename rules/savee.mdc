@@ -8,7 +8,9 @@ alwaysApply: false
 Savee is a curated visual-inspiration platform. The Savee MCP server exposes the
 user's own saves and boards, the comments on saves, plus Savee's public library.
 If the user granted write access, it can also create and edit boards, save
-items, take a save off a board, and post comments. Nothing deletes anything.
+items, take a save off a board, and post comments. With site access, it can
+also draft and publish the user's Site Maker portfolio site. Nothing deletes a
+save, a board or a comment.
 
 ## When to reach for it
 
@@ -37,6 +39,21 @@ Write tools only exist when the user granted them; don't offer what isn't listed
 `add_comment` posts publicly under the user's name and notifies other people,
 so post only what the user asked you to say, never on your own initiative.
 Replies take their thread's visibility, so leave `team_only` out when replying.
+
+## The user's site
+
+With site access, start with `get_site`: it says what the site already has.
+`edit_site` and `add_site_assets` change a private draft the user can follow on
+the preview link in each result. Nothing is live until `publish_site`, which you
+call only when the user explicitly says to.
+
+## When something is missing or broken
+
+When the user asks for something in Savee that none of the tools can do, or a
+tool fails in a way you can't work around, tell the user and report it once with
+`send_feedback`. Use it too when the user asks you to pass feedback on to Savee.
+State facts, leave out private details the problem doesn't need, and don't
+promise a reply: nobody answers through it.
 
 ## Looking vs. listing
 
