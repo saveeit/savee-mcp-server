@@ -93,6 +93,39 @@ gated by its own scope, and a connection without that scope never sees the tool:
 
 Nothing here deletes a save, a board, or a comment, or uploads new images.
 
+With site access (`site:read`, `site:write`), twelve more work on your Site
+Maker portfolio site:
+
+| Tool | What it does |
+| --- | --- |
+| `get_site` | Your site, or the assistant's draft of it, with a preview link |
+| `list_site_templates` | The templates, each with a live demo |
+| `describe_site_settings` | The settings it can change, with allowed values |
+| `create_site` | Creates the site from a template, like the template picker |
+| `edit_site` | Drafts changes: template, settings, pages, captions, image order |
+| `add_site_assets` | Adds images and videos from https links you give it |
+| `revert_site_draft` | Undoes draft changes |
+| `publish_site` | Makes the draft live, after you agree |
+| `connect_site_domain` | Connects a domain you own and lists the DNS records to create |
+| `check_site_domain` | Checks a domain's DNS and certificate, and says what to do next |
+| `set_site_favicon` | Sets the site's favicon from an image link or file |
+| `set_site_og_image` | Sets the image shown when the site's link is shared |
+
+Changes go into a private draft with a preview link; the live site changes only
+when the assistant publishes, which it's told to do only after you agree.
+
+One more is on every connection and needs no scope:
+
+| Tool | What it does |
+| --- | --- |
+| `send_feedback` | Sends the Savee team a note the assistant writes |
+
+When you ask for something in Savee that none of these tools can do, or a tool
+fails, the assistant can report it with `send_feedback`, and you can ask it to
+pass on feedback of your own. It reads and changes nothing in your account. The
+note (up to 2,000 characters) is stored with your account and the name of the
+app that sent it; nobody replies through it.
+
 Every save comes back with its source URL, dimensions, and dominant colors, so
 an assistant can reason about what's in a collection rather than just list
 links. `view_saves` goes further and returns the images themselves, for
