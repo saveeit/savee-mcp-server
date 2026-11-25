@@ -66,7 +66,7 @@ which takes effect immediately.
 
 ## Tools
 
-Nine read tools, always available:
+Ten read tools, always available:
 
 | Tool | What it does |
 | --- | --- |
@@ -79,6 +79,7 @@ Nine read tools, always available:
 | `search` | Savee's public library — everything on the platform, not just your saves |
 | `view_saves` | The actual images for specific saves, so the assistant can see them |
 | `list_comments` | The comment threads on one save, with replies |
+| `score_taste` | How art-directed your images look (0 to 10), with stronger references from Savee |
 
 Five more appear only if you grant write access on the consent screen. Each is
 gated by its own scope, and a connection without that scope never sees the tool:
@@ -114,11 +115,15 @@ Maker portfolio site:
 Changes go into a private draft with a preview link; the live site changes only
 when the assistant publishes, which it's told to do only after you agree.
 
-One more is on every connection and needs no scope:
+Two more are on every connection and need no scope:
 
 | Tool | What it does |
 | --- | --- |
+| `get_usage` | What's left of each of your limits, and when each resets |
 | `send_feedback` | Sends the Savee team a note the assistant writes |
+
+`get_usage` lets the assistant check before a large batch instead of running
+into a limit, and checking spends nothing.
 
 When you ask for something in Savee that none of these tools can do, or a tool
 fails, the assistant can report it with `send_feedback`, and you can ask it to
@@ -135,6 +140,14 @@ questions about composition, layout, type, or how a set of images sit together.
 to your team. `add_comment` joins it as you: a comment is public unless it's
 marked team-only, everyone who saved the image is notified, and replies take the
 visibility of their thread. Assistants are told to post only what you ask for.
+
+`score_taste` rates images you made or generated, from public image links: how
+art-directed each looks on a 0 to 10 scale (where it would fall across Savee's
+library), plus highly rated saves on the same subject that show a stronger
+direction. It judges art direction only, not rendering defects like garbled
+text, and it is too coarse to rank near-identical images. It has its own small
+limit, counted per image (20 an hour, 100 a week), separate from search and
+writes.
 
 `get_save` is the one to use when you have a particular save in mind rather than
 a theme. Paste a link — `https://savee.com/i/997d6DW/` — and the assistant

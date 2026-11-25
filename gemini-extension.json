@@ -1,7 +1,7 @@
 {
   "name": "savee",
-  "version": "1.2.0",
-  "description": "Read your Savee saves, boards, feed and comments, search its public library of curated design inspiration, and, with your permission, build boards, reply to comments and edit your Site Maker site. Hosted MCP; nothing deletes a save, a board or a comment.",
+  "version": "1.3.0",
+  "description": "Read your Savee saves, boards, feed and comments, score how art-directed your own images look, search its public library of curated design inspiration, and, with your permission, build boards, reply to comments and edit your Site Maker site. Hosted MCP; nothing deletes a save, a board or a comment.",
   "mcpServers": {
     "savee": {
       "httpUrl": "https://mcp.savee.com/mcp"

@@ -1,8 +1,8 @@
 {
 	"name": "savee",
 	"displayName": "Savee",
-	"version": "1.3.0",
-	"description": "Read your Savee saves, boards, feed and comments, search its library of curated design inspiration, and, with your permission, build boards, reply to comments and edit your Site Maker site.",
+	"version": "1.4.0",
+	"description": "Read your Savee saves, boards, feed and comments, score how art-directed your own images look, search its library of curated design inspiration, and, with your permission, build boards, reply to comments and edit your Site Maker site.",
 	"author": {
 		"name": "Savee",
 		"email": "hey@savee.com"

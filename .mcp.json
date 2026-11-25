@@ -3,7 +3,7 @@
     "savee": {
       "type": "http",
       "url": "https://mcp.savee.com/mcp",
-      "note": "Official Savee hosted MCP server. Uses OAuth — on first connection the agent is prompted to authorize via browser; no API key to paste. Nine read tools (get_current_user, list_saves, get_save, list_feed, list_boards, list_board_saves, search, view_saves, list_comments); create_board, update_board, save_items, remove_save_from_board and add_comment only when the matching write scope is granted; twelve Site Maker tools (get_site, edit_site, publish_site and others) with site access; send_feedback, a note to the Savee team, on every connection. Nothing deletes a save, a board or a comment."
+      "note": "Official Savee hosted MCP server. Uses OAuth — on first connection the agent is prompted to authorize via browser; no API key to paste. Ten read tools (get_current_user, list_saves, get_save, list_feed, list_boards, list_board_saves, search, view_saves, list_comments, score_taste); create_board, update_board, save_items, remove_save_from_board and add_comment only when the matching write scope is granted; twelve Site Maker tools (get_site, edit_site, publish_site and others) with site access; get_usage (what's left of each limit) and send_feedback (a note to the Savee team) on every connection. Nothing deletes a save, a board or a comment."
     }
   }
 }
