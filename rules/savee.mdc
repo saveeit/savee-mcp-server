@@ -47,6 +47,20 @@ With site access, start with `get_site`: it says what the site already has.
 the preview link in each result. Nothing is live until `publish_site`, which you
 call only when the user explicitly says to.
 
+## Judging the user's own images
+
+`score_taste` takes public http(s) image URLs (up to 10 a call; not images only
+attached to the chat) and returns a 0 to 10 art-direction level per image with
+references from Savee. A one-step difference is a tie, and it doesn't see
+rendering defects, so say so when reporting levels. Its budget is small and
+counted per image: score what the user asked about, not every candidate.
+
+## Limits
+
+Search, the taste score and each kind of write have separate budgets. Before a
+large batch, or when the user asks how much they can still do, call `get_usage`:
+it lists what's left of each and when it resets, and costs nothing.
+
 ## When something is missing or broken
 
 When the user asks for something in Savee that none of the tools can do, or a

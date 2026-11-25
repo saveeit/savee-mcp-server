@@ -3,7 +3,7 @@
 	"name": "com.savee/savee",
 	"title": "Savee",
 	"description": "Read your Savee saves, boards, feed, comments and site, search the library, and save to boards.",
-	"version": "1.5.0",
+	"version": "1.7.0",
 	"websiteUrl": "https://savee.com",
 	"repository": {
 		"url": "https://github.com/saveeit/savee-mcp-server",
